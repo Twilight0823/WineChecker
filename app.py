@@ -108,21 +108,21 @@ if st.button("🔄 Reset Manual Inputs"):
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    fixed_acidity = st.number_input("Fixed Acidity", 0.0, 20.0, st.session_state["fixed_acidity"], key="fixed_acidity")
-    volatile_acidity = st.number_input("Volatile Acidity", 0.0, 2.0, st.session_state["volatile_acidity"], key="volatile_acidity")
-    citric_acid = st.number_input("Citric Acid", 0.0, 2.0, st.session_state["citric_acid"], key="citric_acid")
-    residual_sugar = st.number_input("Residual Sugar", 0.0, 20.0, st.session_state["residual_sugar"], key="residual_sugar")
+    fixed_acidity = st.number_input("Fixed Acidity", 0.0, 20.0, key="fixed_acidity")
+    volatile_acidity = st.number_input("Volatile Acidity", 0.0, 2.0, key="volatile_acidity")
+    citric_acid = st.number_input("Citric Acid", 0.0, 2.0, key="citric_acid")
+    residual_sugar = st.number_input("Residual Sugar", 0.0, 20.0, key="residual_sugar")
 
 with col2:
-    chlorides = st.number_input("Chlorides", 0.0, 1.0, st.session_state["chlorides"], key="chlorides")
-    free_sulfur = st.number_input("Free Sulfur Dioxide", 0.0, 100.0, st.session_state["free_sulfur"], key="free_sulfur")
-    total_sulfur = st.number_input("Total Sulfur Dioxide", 0.0, 200.0, st.session_state["total_sulfur"], key="total_sulfur")
-    density = st.number_input("Density", 0.9, 1.5, st.session_state["density"], key="density")
+    chlorides = st.number_input("Chlorides", 0.0, 1.0, key="chlorides")
+    free_sulfur = st.number_input("Free Sulfur Dioxide", 0.0, 100.0, key="free_sulfur")
+    total_sulfur = st.number_input("Total Sulfur Dioxide", 0.0, 200.0, key="total_sulfur")
+    density = st.number_input("Density", 0.9, 1.5,  key="density")
 
 with col3:
-    pH = st.number_input("pH", 0.0, 14.0, st.session_state["pH"], key="pH")
-    sulphates = st.number_input("Sulphates", 0.0, 2.0, st.session_state["sulphates"], key="sulphates")
-    alcohol = st.number_input("Alcohol", 0.0, 20.0, st.session_state["alcohol"], key="alcohol")
+    pH = st.number_input("pH", 0.0, 14.0, key="pH")
+    sulphates = st.number_input("Sulphates", 0.0, 2.0, key="sulphates")
+    alcohol = st.number_input("Alcohol", 0.0, 20.0, key="alcohol")
 
 # Reset threshold button (separate)
 if st.button("🔄 Reset Threshold"):
@@ -134,7 +134,6 @@ threshold_percent = st.slider(
     "Decision Threshold (%)",
     0,
     100,
-    st.session_state["threshold_percent"],
     key="threshold_percent"
 )
 
